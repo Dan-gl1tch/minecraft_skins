@@ -3,22 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord Server</title>
+    <title>Minecraft Skins & Discord</title>
     <style>
+        /* Анимированный фон */
         body {
-            background-color: #36393f; /* Цвет фона как в Discord */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
         }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .main-card {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px); /* Эффект матового стекла */
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            margin-top: 50px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        h1 { margin-top: 0; font-size: 2em; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+
+        /* Кнопки */
+        .links { margin-top: 20px; display: flex; gap: 10px; justify-content: center; }
+        
+        .btn {
+            text-decoration: none;
+            color: white;
+            background: #7289DA;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover { transform: scale(1.05); background: #5d73c2; }
+        .btn.tg { background: #0088cc; }
+
+        iframe { border-radius: 10px; margin-top: 20px; }
     </style>
 </head>
 <body>
 
-    <!-- Твой виджет -->
-    <iframe src="https://discord.com/widget?id=927281250140569640&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    <div class="main-card">
+        <h1>Minecraft Skins Project ⛏️</h1>
+        <p>Добро пожаловать! Здесь наш ламповый Discord:</p>
+        
+        <!-- Виджет -->
+        <iframe src="https://discord.com" 
+                width="350" height="500" allowtransparency="true" frameborder="0" 
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+        </iframe>
+
+        <div class="links">
+            <a href="https://discord.gg" class="btn" target="_blank">Зайти в Дискорд</a>
+            <a href="https://t.me" class="btn tg" target="_blank">Мой Telegram</a>
+        </div>
+    </div>
+
+    <p style="margin-top: 30px; opacity: 0.6;">© 2024 Dan-gl1tch. All rights reserved.</p>
 
 </body>
 </html>
